@@ -12,6 +12,7 @@ class charybdis::default inherits charybdis {
   include charybdis::default::general
   include charybdis::default::loadmodule
   include charybdis::default::modules
+  include charybdis::default::operator
   include charybdis::default::privset
   include charybdis::default::serverinfo
 

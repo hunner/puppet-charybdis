@@ -2,6 +2,7 @@ class charybdis::default::auth {
   charybdis::auth { 'opers':
     order     => '1',
     users     => [
+      '*@127.0.0.0/8',
       '*@172.16.0.0/12',
       '*@fc88::*',
     ],
