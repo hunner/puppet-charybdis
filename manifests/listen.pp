@@ -1,15 +1,25 @@
-class charybdis::listen (
-  $hosts    = {
-    'default' => {
-      'port'    => '5000, 6665 .. 6669',
-      'sslport' => '6697',
-    }
-  },
+define charybdis::listen (
+  $port,
+  $sslport,
   $conffile = $charybdis::conffile
 ) {
-  concat::fragment { "listen conf":
+  concat::fragment { "${name} listen":
     target  => $conffile,
     content => template("charybdis/listen.erb"),
     order   => '020',
+  }
+  if ! defined(Concat::Fragment['listen open']) {
+    concat::fragment { 'listen open':
+      target  => $conffile,
+      content => "listen {\n",
+      order   => '019',
+    }
+  }
+  if ! defined(Concat::Fragment['listen close']) {
+    concat::fragment { 'listen close':
+      target  => $conffile,
+      content => "};\n",
+      order   => '021',
+    }
   }
 }

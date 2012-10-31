@@ -30,6 +30,6 @@ define charybdis::auth (
   concat::fragment { "$authname auth":
     target  => $conffile,
     content => template("charybdis/auth.erb"),
-    order   => "020-${order}",
+    order   => "025-${order}",
   }
 }

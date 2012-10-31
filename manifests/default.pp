@@ -1,7 +1,6 @@
 class charybdis::default inherits charybdis {
   include charybdis::admin
   include charybdis::cluster
-  include charybdis::listen
   include charybdis::log
   include charybdis::serverhide
 
@@ -11,6 +10,7 @@ class charybdis::default inherits charybdis {
   include charybdis::default::class
   include charybdis::default::channel
   include charybdis::default::general
+  include charybdis::default::listen
   include charybdis::default::loadmodule
   include charybdis::default::modules
   include charybdis::default::operator
