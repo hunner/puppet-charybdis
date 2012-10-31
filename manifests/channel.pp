@@ -26,4 +26,18 @@ class charybdis::channel (
     content => template('charybdis/channel.erb'),
     order   => '080',
   }
+  if ! defined(Concat::Fragment['blacklist open']) {
+    concat::fragment { 'blacklist open':
+      target  => $conffile,
+      content => "blacklist {\n",
+      order   => '99',
+    }
+  }
+  if ! defined(Concat::Fragment['blacklist close']) {
+    concat::fragment { 'blacklist close':
+      target  => $conffile,
+      content => "};\n",
+      order   => '101',
+    }
+  }
 }

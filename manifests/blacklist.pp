@@ -1,10 +1,25 @@
-class charybdis::blacklist (
-  $hosts    = {},
+define charybdis::blacklist (
+  $reason,
   $conffile = $charybdis::conffile
 ) {
-  concat::fragment { 'blacklist conf':
+  $host = $name
+  concat::fragment { "$name blacklist":
     target  => $conffile,
     content => template('charybdis/blacklist.erb'),
     order   => '100',
+  }
+  if ! defined(Concat::Fragment['blacklist open']) {
+    concat::fragment { 'blacklist open':
+      target  => $conffile,
+      content => "blacklist {\n",
+      order   => '99',
+    }
+  }
+  if ! defined(Concat::Fragment['blacklist close']) {
+    concat::fragment { 'blacklist close':
+      target  => $conffile,
+      content => "};\n",
+      order   => '101',
+    }
   }
 }
