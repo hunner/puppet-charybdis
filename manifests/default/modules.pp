@@ -1,8 +1,4 @@
 class charybdis::default::modules {
-  class { 'charybdis::modules':
-    paths => [
-      'modules',
-      'modules/autoload',
-    ],
-  }
+  charybdis::modules { 'modules': }
+  charybdis::modules { 'modules/autoload': }
 }
