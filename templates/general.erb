@@ -1,11 +1,8 @@
 general {
-<% settings.each do |key,value| -%>
-<% if value.is_a? Array -%>
-    <%= key %> = <%= value.join(', ') %>;
-<% elsif value =~ /(yes|no)/ -%>
-    <%= key %> = <%= value %>;
-<% else -%>
-    <%= key %> = "<%= value %>";
+<% unquoted.each do |key,value| -%>
+    <%= key %> = <%= Array(value).join(', ') %>;
 <% end -%>
+<% quoted.each do |key,value| -%>
+    <%= key %> = "<%= value %>";
 <% end -%>
 };

@@ -1,12 +1,18 @@
 class charybdis::default::general {
   class { 'charybdis::general':
-    settings => {
-      'hide_error_messages'         => 'opers',
-      'hide_spoof_ips'              => 'yes',
+    quoted   => {
       'default_umodes'              => '+i',
+      'oper_snomask'                => '+s',
       'default_operstring'          => 'is an IRC Operator',
       'default_adminstring'         => 'is a Server Administrator',
       'servicestring'               => 'is a Network Service',
+      'identify_service'            => 'NickServ@services.int',
+      'identify_command'            => 'IDENTIFY',
+      'kline_reason'                => 'K-Lined',
+    },
+    unquoted => {
+      'hide_error_messages'         => 'opers',
+      'hide_spoof_ips'              => 'yes',
       'disable_fake_channels'       => 'no',
       'tkline_expire_notices'       => 'no',
       'default_floodcount'          => '10',
@@ -28,9 +34,6 @@ class charybdis::default::general {
       'dline_with_reason'           => 'yes',
       'kline_delay'                 => '0 seconds',
       'kline_with_reason'           => 'yes',
-      'kline_reason'                => 'K-Lined',
-      'identify_service'            => 'NickServ@services.int',
-      'identify_command'            => 'IDENTIFY',
       'non_redundant_klines'        => 'yes',
       'warn_no_nline'               => 'yes',
       'use_propagated_bans'         => 'yes',
@@ -68,7 +71,6 @@ class charybdis::default::general {
         'operwall',
         'wallop',
       ],
-      'oper_snomask'                => '+s',
       'burst_away'                  => 'yes',
       'nick_delay'                  => '0 seconds',
       'reject_ban_time'             => '1 minute',

@@ -1,5 +1,6 @@
 class charybdis::general (
-  $settings = {},
+  $quoted   = {},
+  $unquoted = {},
   $conffile = $charybdis::conffile
 ) {
   concat::fragment { 'general conf':
