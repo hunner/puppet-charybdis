@@ -1,5 +1,6 @@
 class charybdis::default inherits charybdis {
   include charybdis::admin
+  include charybdis::channel
   include charybdis::cluster
   include charybdis::listen
   include charybdis::log
