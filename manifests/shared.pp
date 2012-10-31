@@ -1,7 +1,7 @@
 define charybdis::shared (
-  oper      = '*@*',
-  server    = '*',
-  flags     = [
+  $oper     = '*@*',
+  $server   = '*',
+  $flags    = [
     'all',
     'rehash',
   ],

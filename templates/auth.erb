@@ -10,7 +10,7 @@ auth {
     spoof = <%= spoof %>;
 <% end -%>
 <% if flags and ! flags.empty? -%>
-    flags = <%= flags,join(', ') %>;
+    flags = <%= flags.join(', ') %>;
 <% end -%>
     class = <%= authclass %>;
 };

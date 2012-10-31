@@ -1,4 +1,4 @@
-class charybdis::default {
+class charybdis::default inherits charybdis {
   include charybdis::admin
   include charybdis::cluster
   include charybdis::log

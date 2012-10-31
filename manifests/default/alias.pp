@@ -1,26 +1,26 @@
 class charybdis::default::alias {
-  charybdis::alias { 'NickServ'
+  charybdis::alias { 'NickServ':
     target => 'NickServ',
   }
-  charybdis::alias { 'ChanServ'
+  charybdis::alias { 'ChanServ':
     target => 'ChanServ',
   }
-  charybdis::alias { 'OperServ'
+  charybdis::alias { 'OperServ':
     target => 'OperServ',
   }
-  charybdis::alias { 'MemoServ'
+  charybdis::alias { 'MemoServ':
     target => 'MemoServ',
   }
-  charybdis::alias { 'NS'
+  charybdis::alias { 'NS':
     target => 'NickServ',
   }
-  charybdis::alias { 'CS'
+  charybdis::alias { 'CS':
     target => 'ChanServ',
   }
-  charybdis::alias { 'OS'
+  charybdis::alias { 'OS':
     target => 'OperServ',
   }
-  charybdis::alias { 'MS'
+  charybdis::alias { 'MS':
     target => 'MemoServ',
   }
 }

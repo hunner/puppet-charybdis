@@ -1,7 +1,7 @@
 define charybdis::privset (
   $extends  = false,
   $privs    = [],
-  $order    = '99'
+  $order    = '99',
   $conffile = $charybdis::conffile
 ) {
   $privset = $name

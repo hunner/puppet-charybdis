@@ -1,6 +1,6 @@
 class charybdis::cluster (
-  $name     = '*',
-  $flags    = [
+  $clustername = '*',
+  $flags       = [
     'kline',
     'tkline',
     'unkline',
@@ -11,7 +11,7 @@ class charybdis::cluster (
     'tresv',
     'unresv',
   ],
-  $conffile = $charybdis::conffile
+  $conffile    = $charybdis::conffile
 ) {
   concat::fragment { 'cluster conf':
     target  => $conffile,

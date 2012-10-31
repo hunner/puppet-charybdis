@@ -1,14 +1,13 @@
 define charybdis::auth (
-  $class,
+  $authclass,
   $users    = [],
-  $order    = '5'
+  $order    = '5',
   $password = false,
   $spoof    = false,
   $flags    = [],
   $conffile = $charybdis::conffile
 ) {
   $authname = $name
-  $authclass = $class
 
   # Possible flags:
   #

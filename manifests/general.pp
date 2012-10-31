@@ -3,7 +3,7 @@ class charybdis::general (
   $conffile = $charybdis::conffile
 ) {
   concat::fragment { 'general conf':
-    target  => $conffile
+    target  => $conffile,
     content => template('charybdis/general.erb'),
     order   => '120',
   }

@@ -14,8 +14,8 @@ define charybdis::class (
   $classname = $name
 
   concat::fragment { "$classname class":
-    target  => $conffile
-    content => template("charybdis/class.erb"),
+    target  => $conffile,
+    content => template('charybdis/class.erb'),
     order   => '010',
   }
 }
