@@ -1,0 +1,25 @@
+operator "<%= name %>" {
+<% Array(users).each do |user| -%>
+    user = <%= user -%>;
+<% end -%>
+    privset = "<%= privset %>";
+<% if password -%>
+    password = "<%= password %>";
+<% end -%>
+<% if rsa_public_key_file -%>
+    rsa_public_key_file = "<%= rsa_public_key_file %>";
+<% end -%>
+<% if umodes and ! umodes.empty? -%>
+    umodes = <%= Array(umodes).join(', ') %>;
+<% end -%>
+<% if fingerprint -%>
+    fingerprint = "<%= fingerprint %>";
+<% end -%>
+<% if snomask -%>
+    snomask = "<%= snomask %>";
+<% end -%>
+<% if flags and ! flags.empty? -%>
+    flags = <%= Array(flags).join(', ') %>;
+<% end -%>
+};
+

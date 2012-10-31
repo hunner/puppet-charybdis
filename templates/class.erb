@@ -1,0 +1,26 @@
+class "<%= classname %>" {
+    ping_time = <%= ping_time %>;
+    sendq = <%= sendq %>;
+    max_number = <%= max_number %>;
+<% if connectfreq -%>
+    connectfreq = <%= connectfreq %>;
+<% end -%>
+<% if number_per_ident -%>
+    number_per_ident = <%= number_per_ident %>;
+<% end -%>
+<% if number_per_ip -%>
+    number_per_ip = <%= number_per_ip %>;
+<% end -%>
+<% if number_per_ip_global -%>
+    number_per_ip_global = <%= number_per_ip_global %>;
+<% end -%>
+<% if number_per_cidr -%>
+    number_per_cidr = <%= number_per_cidr %>;
+<% end -%>
+<% if cidr_ipv4_bitlen -%>
+    cidr_ipv4_bitlen = <%= cidr_ipv4_bitlen %>;
+<% end -%>
+<% if cidr_ipv6_bitlen -%>
+    cidr_ipv6_bitlen = <%= cidr_ipv6_bitlen %>;
+<% end -%>
+};

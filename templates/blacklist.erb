@@ -1,0 +1,6 @@
+blacklist {
+<% hosts.each do |key,value| -%>
+    host = "<%= key %>";
+    reject_reason = "<%= value %>";
+<% end -%>
+};

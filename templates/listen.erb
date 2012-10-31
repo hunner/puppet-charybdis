@@ -1,0 +1,15 @@
+listen {
+<% hosts.each do |name,attributes| -%>
+    # Listen for <%= name %>
+<% if attributes['host'] -%>
+    host = "<%= attributes['host'] %>";
+<% end -%>
+<% if attributes['port'] -%>
+    port = <%= attributes['port'] %>;
+<% end -%>
+<% if attributes['sslport'] -%>
+    sslport = <%= attributes['sslport'] %>;
+<% end -%>
+<% end -%>
+};
+

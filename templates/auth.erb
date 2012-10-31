@@ -1,0 +1,16 @@
+auth {
+    # auth block for <%= authname %>
+<% Array(users).each do |user| -%>
+    user = <%= user %>;
+<% end -%>
+<% if password -%>
+    password = <%= password %>;
+<% end -%>
+<% if spoof -%>
+    spoof = <%= spoof %>;
+<% end -%>
+<% if flags and ! flags.empty? -%>
+    flags = <%= flags,join(', ') %>;
+<% end -%>
+    class = <%= authclass %>;
+};

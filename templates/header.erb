@@ -1,0 +1,60 @@
+/* Extensions */
+#loadmodule "extensions/chm_operonly_compat.so";
+#loadmodule "extensions/chm_quietunreg_compat.so";
+#loadmodule "extensions/chm_sslonly_compat.so";
+#loadmodule "extensions/createauthonly.so";
+#loadmodule "extensions/extb_account.so";
+#loadmodule "extensions/extb_canjoin.so";
+#loadmodule "extensions/extb_channel.so";
+#loadmodule "extensions/extb_extgecos.so";
+#loadmodule "extensions/extb_oper.so";
+#loadmodule "extensions/extb_realname.so";
+#loadmodule "extensions/extb_server.so";
+#loadmodule "extensions/extb_ssl.so";
+#loadmodule "extensions/hurt.so";
+#loadmodule "extensions/m_findforwards.so";
+#loadmodule "extensions/m_identify.so";
+#loadmodule "extensions/no_oper_invis.so";
+#loadmodule "extensions/sno_farconnect.so";
+#loadmodule "extensions/sno_globalkline.so";
+#loadmodule "extensions/sno_globaloper.so";
+#loadmodule "extensions/sno_whois.so";
+
+/*
+ * IP cloaking extensions: use ip_cloaking_4.0
+ * if you're linking 3.2 and later, otherwise use
+ * ip_cloaking.so, for compatibility with older 3.x
+ * releases.
+ */
+
+#loadmodule "extensions/ip_cloaking_4.0.so";
+#loadmodule "extensions/ip_cloaking.so";
+
+serverinfo {
+    name = "<%= server_name %>";
+    sid = "<%= sid %>";
+    description = "<%= server_description %>";
+    network_name = "<%= network_name %>";
+    network_desc = "<%= network_description %>";
+    hub = <%= hubtext %>;
+
+    /* On multi-homed hosts you may need the following. These define
+     * the addresses we connect from to other servers. */
+    /* for IPv4 */
+    #vhost = "192.169.0.1";
+    /* for IPv6 */
+    #vhost6 = "3ffe:80e8:546::2";
+
+<% if ssl_private_key -%>
+    ssl_private_key = <%= ssl_private_key %>;
+<% end -%>
+<% if ssl_cert -%>
+    ssl_cert = <%= ssl_cert %>;
+<% end -%>
+<% if ssl_dh_params -%>
+    ssl_dh_params = <%= ssl_dh_params %>;
+<% end -%>
+    ssld_count = <%= ssld_count %>;
+
+    default_max_clients = <%= max_clients %>;
+};

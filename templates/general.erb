@@ -1,0 +1,8 @@
+general {
+<% settings.each do |key,value| -%>
+<% if value.is_a? Array -%>
+    <%= key %> = <%= value.join(', ') %>;
+<% else -%>
+    <%= key %> = "<%= value %>";
+<% end -%>
+};
