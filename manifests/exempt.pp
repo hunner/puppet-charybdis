@@ -5,6 +5,6 @@ define charybdis::exempt (
   concat::fragment { "$name exempt":
     target  => $conffile,
     content => template('charybdis/exempt.erb'),
-    order   => '080',
+    order   => '075',
   }
 }

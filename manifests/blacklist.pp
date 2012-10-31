@@ -12,7 +12,7 @@ define charybdis::blacklist (
     concat::fragment { 'blacklist open':
       target  => $conffile,
       content => "blacklist {\n",
-      order   => '99',
+      order   => '099',
     }
   }
   if ! defined(Concat::Fragment['blacklist close']) {
