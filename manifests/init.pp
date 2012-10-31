@@ -17,7 +17,7 @@ class charybdis (
   service { 'charybdis':
     ensure  => running,
     enable  => true,
-    restart => '/usr/sbin/service charybdis reload',
+    restart => '/bin/kill -HUP `cat /var/run/charybdis/ircd.pid`',
   }
   concat { $conffile:
     owner   => "root",
