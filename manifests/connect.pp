@@ -2,7 +2,7 @@ define charybdis::connect (
   $ip,
   $send_password,
   $accept_password,
-  $port
+  $port,
   $ipv6     = false,
   $hub_mask = '*',
   $class    = 'server',
