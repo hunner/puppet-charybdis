@@ -20,9 +20,9 @@ class charybdis (
     restart => '/usr/sbin/service charybdis reload',
   }
   concat { $conffile:
-    owner   => "irc",
-    group   => "irc",
-    mode    => "400",
+    owner   => "root",
+    group   => "charybdis",
+    mode    => "440",
     require => Package['charybdis'],
     notify  => Service['charybdis'],
   }
