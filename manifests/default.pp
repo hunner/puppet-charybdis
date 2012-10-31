@@ -4,6 +4,7 @@ class charybdis::default inherits charybdis {
   include charybdis::cluster
   include charybdis::listen
   include charybdis::log
+  include charybdis::serverhide
 
   include charybdis::default::alias
   include charybdis::default::auth
