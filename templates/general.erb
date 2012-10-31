@@ -1,8 +1,1 @@
-general {
-<% unquoted.each do |key,value| -%>
-    <%= key %> = <%= Array(value).join(', ') %>;
-<% end -%>
-<% quoted.each do |key,value| -%>
-    <%= key %> = "<%= value %>";
-<% end -%>
-};
+    <%= name %> = <%= '"' if quoted %><%= Array(value).join(', ') %><%= '"' if quoted %>;
