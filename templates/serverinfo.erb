@@ -14,12 +14,12 @@ serverinfo {
     vhost6 = "<%= virtual_ipv6 %>";
 <% end -%>
 <% if ssl_private_key -%>
-    ssl_private_key = <%= ssl_private_key %>;
+    ssl_private_key = "<%= ssl_private_key %>";
 <% end -%>
 <% if ssl_cert -%>
-    ssl_cert = <%= ssl_cert %>;
+    ssl_cert = "<%= ssl_cert %>";
 <% end -%>
 <% if ssl_dh_params -%>
-    ssl_dh_params = <%= ssl_dh_params %>;
+    ssl_dh_params = "<%= ssl_dh_params %>";
 <% end -%>
 };
