@@ -9,6 +9,7 @@ class charybdis::default inherits charybdis {
   include charybdis::default::blacklist
   include charybdis::default::class
   include charybdis::default::general
+  include charybdis::default::loadmodule
   include charybdis::default::modules
   include charybdis::default::privset
   include charybdis::default::serverinfo

@@ -25,6 +25,6 @@ class charybdis::serverinfo (
   concat::fragment { 'serverinfo conf':
     target  => $conffile,
     content => template('charybdis/serverinfo.erb'),
-    order   => '001',
+    order   => '002',
   }
 }
