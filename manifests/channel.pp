@@ -19,7 +19,7 @@ class charybdis::channel (
     'resv_forcepart'             = "yes",
     'channel_target_change'      = "yes",
   },
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { 'channel conf':
     target  => $conffile,

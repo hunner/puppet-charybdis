@@ -10,6 +10,7 @@ define charybdis::connect (
     'ssl',
     'topicburst',
   ],
+  $conffile = $charybdis::conffile
 ) {
   $connectclass = $class
 

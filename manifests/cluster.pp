@@ -11,7 +11,7 @@ class charybdis::cluster (
     'tresv',
     'unresv',
   ],
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { 'cluster conf':
     target  => $conffile,

@@ -8,7 +8,7 @@ class charybdis::log (
   $killlog    = '/var/log/charybdis/killlog',
   $operspylog = '/var/log/charybdis/operspylog',
   $ioerrorlog = '/var/log/charybdis/ioerror',
-  $conffile   = $charybdis::conffile,
+  $conffile   = $charybdis::conffile
 ) {
   concat::fragment { 'log conf':
     target  => $conffile,

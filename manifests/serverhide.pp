@@ -5,7 +5,7 @@ class charybdis::serverhide (
     'hidden'         = 'no',
     'disable_hidden' = 'no',
   },
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { 'serverhide conf':
     target  => $conffile,

@@ -9,7 +9,7 @@ define charybdis::class (
   $number_per_cidr      = false,
   $cidr_ipv4_bitlen     = false,
   $cidr_ipv6_bitlen     = false,
-  $conffile             = $charybdis::conffile,
+  $conffile             = $charybdis::conffile
 ) {
   $classname = $name
 

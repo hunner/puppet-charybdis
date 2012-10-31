@@ -1,6 +1,6 @@
 class charybdis::blacklist (
-  $hosts = {},
-  $conffile = $charybdis::conffile,
+  $hosts    = {},
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { 'blacklist conf':
     target  => $conffile,

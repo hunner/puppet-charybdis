@@ -8,7 +8,7 @@
 #  ripienaar-concat module
 #
 class charybdis (
-  $conffile = $charybdis::params::conffile,
+  $conffile = $charybdis::params::conffile
 ) inherits charybdis::params {
 
   # Location of the conf file based on operating system

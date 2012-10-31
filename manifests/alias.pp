@@ -1,6 +1,6 @@
 define charybdis::alias (
   $target,
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { "$name alias":
     target  => $conffile,

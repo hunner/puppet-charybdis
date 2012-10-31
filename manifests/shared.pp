@@ -5,7 +5,7 @@ define charybdis::shared (
     'all',
     'rehash',
   ],
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { "$name shared":
     target  => $conffile,

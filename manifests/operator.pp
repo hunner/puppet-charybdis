@@ -25,6 +25,7 @@ define charybdis::operator (
   $fingerprint         = false,
   $snomask             = false,
   $flags               = [],
+  $conffile            = $charybdis::conffile
 ) {
   if ! $password and ! $rsa_public_key_file {
     fail("Must supply either `password` or `rsa_public_key_file` to Charybdis::Operator[$name]")
@@ -32,7 +33,7 @@ define charybdis::operator (
 
   concat::fragment { "${name} operator":
     target  => $conffile,
-    content => template("charybdis/operator.erb"),
+    content => template('charybdis/operator.erb'),
     order   => '040',
   }
 }

@@ -5,7 +5,7 @@ class charybdis::listen (
       'sslport' => '6697',
     }
   },
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   concat::fragment { "listen conf":
     target  => $conffile,

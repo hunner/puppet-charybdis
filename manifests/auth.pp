@@ -5,7 +5,7 @@ define charybdis::auth (
   $password = false,
   $spoof    = false,
   $flags    = [],
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   $authname = $name
   $authclass = $class

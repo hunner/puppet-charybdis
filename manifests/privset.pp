@@ -2,7 +2,7 @@ define charybdis::privset (
   $extends  = false,
   $privs    = [],
   $order    = '99'
-  $conffile = $charybdis::conffile,
+  $conffile = $charybdis::conffile
 ) {
   $privset = $name
   concat::fragment { "$privset privset":
