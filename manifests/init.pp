@@ -17,7 +17,7 @@ class charybdis (
   service { 'charybdis':
     ensure  => running,
     enable  => true,
-    restart => '/sbin/service charybdis reload',
+    restart => '/usr/sbin/service charybdis reload',
   }
   concat { $conffile:
     owner   => "irc",
