@@ -1,8 +1,10 @@
     # Listen for <%= name %>
-    host = "<%= name %>";
-<% if port -%>
-    port = <%= port %>;
+<% if @host -%>
+    host = "<%= @host %>";
 <% end -%>
-<% if sslport -%>
-    sslport = <%= sslport %>;
+<% if @port -%>
+    port = <%= @port %>;
+<% end -%>
+<% if @sslport -%>
+    sslport = <%= @sslport %>;
 <% end -%>

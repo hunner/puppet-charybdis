@@ -1,6 +1,7 @@
 define charybdis::listen (
   $port,
   $sslport,
+  $host = undef,
   $conffile = $charybdis::conffile
 ) {
   concat::fragment { "${name} listen":
