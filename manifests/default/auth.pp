@@ -3,7 +3,6 @@ class charybdis::default::auth {
     order     => '1',
     users     => [
       '*@127.0.0.0/8',
-      '*@172.16.0.0/12',
       '*@fc88::*',
     ],
     password  => 'letmein',
