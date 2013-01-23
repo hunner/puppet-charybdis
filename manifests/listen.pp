@@ -1,9 +1,13 @@
 define charybdis::listen (
-  $port,
-  $sslport,
+  $port = undef,
+  $sslport = undef,
   $host = undef,
   $conffile = $charybdis::conffile
 ) {
+  if ! $port and ! $sslport {
+    fail("Charybdis::Listen[${name}]: port and/or sslport parameters required.")
+  }
+
   concat::fragment { "${name} listen":
     target  => $conffile,
     content => template("charybdis/listen.erb"),
