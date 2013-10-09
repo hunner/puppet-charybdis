@@ -1,12 +1,12 @@
-connect "<%= name %>" {
-    host = "<%= ip %>";
-    send_password = "<%= send_password %>";
-    accept_password = "<%= accept_password %>";
-    port = <%= port %>;
-    hub_mask = <%= hub_mask %>;
-    class = <%= connectclass %>;
-    flags = <%= Array(flags).join(', ') %>;
-<% if ipv6 -%>
+connect "<%= @name %>" {
+    host = "<%= @ip %>";
+    send_password = "<%= @send_password %>";
+    accept_password = "<%= @accept_password %>";
+    port = <%= @port %>;
+    hub_mask = <%= @hub_mask %>;
+    class = <%= @connectclass %>;
+    flags = <%= Array(@flags).join(', ') %>;
+<% if @ipv6 -%>
     aftype = ipv6;
 <% end -%>
 };

@@ -31,12 +31,12 @@
 #loadmodule "extensions/ip_cloaking.so";
 
 serverinfo {
-    name = "<%= server_name %>";
-    sid = "<%= sid %>";
-    description = "<%= server_description %>";
-    network_name = "<%= network_name %>";
-    network_desc = "<%= network_description %>";
-    hub = <%= hubtext %>;
+    name = "<%= @server_name %>";
+    sid = "<%= @sid %>";
+    description = "<%= @server_description %>";
+    network_name = "<%= @network_name %>";
+    network_desc = "<%= @network_description %>";
+    hub = <%= @hubtext %>;
 
     /* On multi-homed hosts you may need the following. These define
      * the addresses we connect from to other servers. */
@@ -45,16 +45,16 @@ serverinfo {
     /* for IPv6 */
     #vhost6 = "3ffe:80e8:546::2";
 
-<% if ssl_private_key -%>
-    ssl_private_key = <%= ssl_private_key %>;
+<% if @ssl_private_key -%>
+    ssl_private_key = <%= @ssl_private_key %>;
 <% end -%>
-<% if ssl_cert -%>
-    ssl_cert = <%= ssl_cert %>;
+<% if @ssl_cert -%>
+    ssl_cert = <%= @ssl_cert %>;
 <% end -%>
-<% if ssl_dh_params -%>
-    ssl_dh_params = <%= ssl_dh_params %>;
+<% if @ssl_dh_params -%>
+    ssl_dh_params = <%= @ssl_dh_params %>;
 <% end -%>
-    ssld_count = <%= ssld_count %>;
+    ssld_count = <%= @ssld_count %>;
 
-    default_max_clients = <%= max_clients %>;
+    default_max_clients = <%= @max_clients %>;
 };
