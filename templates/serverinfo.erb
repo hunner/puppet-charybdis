@@ -1,25 +1,25 @@
 serverinfo {
-    name = "<%= server_name %>";
-    sid = "<%= server_id %>";
-    description = "<%= server_description %>";
-    network_name = "<%= network_name %>";
-    network_desc = "<%= network_description %>";
-    hub = <%= hubtext %>;
-    ssld_count = <%= ssld_count %>;
-    default_max_clients = <%= max_clients %>;
-<% if virtual_ipv4 -%>
-    vhost = "<%= virtual_ipv4 %>";
+    name = "<%= @server_name %>";
+    sid = "<%= @server_id %>";
+    description = "<%= @server_description %>";
+    network_name = "<%= @network_name %>";
+    network_desc = "<%= @network_description %>";
+    hub = <%= @hubtext %>;
+    ssld_count = <%= @ssld_count %>;
+    default_max_clients = <%= @max_clients %>;
+<% if @virtual_ipv4 -%>
+    vhost = "<%= @virtual_ipv4 %>";
 <% end -%>
-<% if virtual_ipv6 -%>
-    vhost6 = "<%= virtual_ipv6 %>";
+<% if @virtual_ipv6 -%>
+    vhost6 = "<%= @virtual_ipv6 %>";
 <% end -%>
-<% if ssl_private_key -%>
-    ssl_private_key = "<%= ssl_private_key %>";
+<% if @ssl_private_key -%>
+    ssl_private_key = "<%= @ssl_private_key %>";
 <% end -%>
-<% if ssl_cert -%>
-    ssl_cert = "<%= ssl_cert %>";
+<% if @ssl_cert -%>
+    ssl_cert = "<%= @ssl_cert %>";
 <% end -%>
-<% if ssl_dh_params -%>
-    ssl_dh_params = "<%= ssl_dh_params %>";
+<% if @ssl_dh_params -%>
+    ssl_dh_params = "<%= @ssl_dh_params %>";
 <% end -%>
 };
