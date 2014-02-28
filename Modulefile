@@ -1,5 +1,5 @@
 name    'hunner-charybdis'
-version '0.2.0'
+version '1.0.0'
 source 'git://github.com/hunner/puppet-charybdis.git'
 author 'hunner'
 license 'Apache License, Version 2.0'
