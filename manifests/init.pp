@@ -19,7 +19,6 @@ class charybdis (
     enable  => true,
     restart => '/bin/kill -HUP `cat /var/run/charybdis/ircd.pid`',
   }
-  include concat::setup
   concat { $conffile:
     owner   => "root",
     group   => "charybdis",
